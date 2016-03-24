@@ -1,4 +1,4 @@
-#\ -p 80
+#\ -p 80 -o 0.0.0.0
 # config.ru
 require './app'
 set :port, 80
