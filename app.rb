@@ -4,7 +4,7 @@ require 'sinatra'
 require 'tilt/erb'
 require 'haml'
 
-class HelloWorldApp < Sinatra::Base
+class Tribality < Sinatra::Base
   set :port, 80
   get '/' do
 	haml :index
