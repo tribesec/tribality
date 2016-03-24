@@ -1,0 +1,29 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %title tribal
+    %link{:href => "/css/style.css", :rel => "stylesheet"}/
+    %link{:href => "/css/jquery.fancybox.css", :rel => "stylesheet"}/
+    -#%link{:href => "/css/jquery.fancybox-buttons.css", :rel => "stylesheet"}/
+    -#%link{:href => "/css/jquery.fancybox-thumbs.css", :rel => "stylesheet"}/
+    / Grab jQuery from a CDN, fall back to local if necessary
+    %script{:src => "//code.jquery.com/jquery-latest.min.js"}
+    %script{:src => "/js/jquery.mousewheel-3.0.6.pack.js"}
+    %script{:src => "/js/jquery.fancybox.pack.js"}
+    -#%script{:src => "/js/jquery.fancybox.buttons.js"}
+    -#%script{:src => "/js/jquery.fancybox.media.js"}
+    -#%script{:src => "/js/jquery.fancybox.thumbs.js"}
+    :javascript
+      /* <![CDATA[ */
+          !window.jQuery && document.write('<script type="text/javascript" src="/js/jquery.min.js"><\/script>')
+      /* ]]> */
+  %body
+    = yield
+    #footer
+      Powered by
+      %a{:href => "http://sinatrarb.com"} Sinatra
+  :javascript
+    $(document).ready(function() {
+      $(".fancybox").fancybox();
+    });

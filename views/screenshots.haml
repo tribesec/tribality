@@ -1,0 +1,24 @@
+#page
+  #sidebar
+    %ul#sidebar-items
+  #content
+    #header
+      tribality
+      %br/
+      gay-ass screenshots tbh
+    #pane
+      #listing
+        %ul
+          -@files.each { |file|
+          %li.entry
+            %a.fancybox{:href=>"/screenshots/#{file}", :rel=>"group"}
+              =file
+          -}
+      %br/
+    :javascript
+      $('#about_env_link').click(function() {
+          $('#about-content').slideToggle('fast', function() {
+              // ok
+          });
+          return( false );
+      });
