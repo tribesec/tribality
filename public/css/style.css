@@ -32,6 +32,7 @@ margin: auto;
 margin-left: auto;
 padding-left: 0px;
 margin-right: auto;
+text-align: left;
 }
 
 #content {
@@ -186,4 +187,32 @@ text-align: center;
 padding-right: 160px;
 font-family: sans-serif;
 font-size: 10px;
+}
+
+/* END DEFAULT STYLE, BEGIN PERSONAL */
+
+.cta {
+	text-align: center;
+	color: black
+	font-weight: bold;
+	font-size: 4em;
+	margin-bottom: 0.75em;
+	font-family: Terminal;
+}
+
+
+#msg {
+	height: 20em;
+}
+
+label {
+	font-size: 1.5em;
+}
+input, textarea {
+	width: 100%;
+}
+
+#contact {
+	width: 75%;
+	margin: 0 auto;
 }
